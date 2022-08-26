@@ -399,6 +399,7 @@ go to student/templates/student/student.html and crispy tags
 </div>
 {% endblock container %}
 ```
+
 ## MESSAGES
 
 go to student/views.py and import messages end send success message
