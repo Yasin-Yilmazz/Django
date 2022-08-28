@@ -2,11 +2,15 @@ from django.shortcuts import redirect, render
 from django.http import HttpResponse
 from .forms import StudentForm
 from .models import Student
+from django.views.generic import TemplateView, ListView, DetailView
+
 # Create your views here.
 
 def home(request):
     return render(request, "fscohort/home.html")
 
+class HomeView(TemplateView):
+    template_name = "fscohort/home.html"
 
 def student_list(request):
 
@@ -17,6 +21,9 @@ def student_list(request):
     }
 
     return render(request, "fscohort/student_list.html", context)
+
+class StudentListView(ListView):
+    model = Student
 
 def student_add(request):
     form = StudentForm()
@@ -42,6 +49,10 @@ def student_detail(request,id):
     }
 
     return render(request, "fscohort/student_detail.html", context)
+
+class StudentDetailView(DetailView):
+    model = Student
+    pk_url_kwarg = 'id'
 
 def student_update(request, id):
 
