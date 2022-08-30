@@ -1,5 +1,5 @@
 .navbar {
-    background-color: cadetblue;
+    background-color: #FF7A48;
 }
 
 .container{
@@ -28,9 +28,23 @@
 }
 
 body {
-    background-image: url(https://cdn.pixabay.com/photo/2017/01/24/03/53/plant-2004483__480.jpg);
+    background-image: url(https://thumbs.dreamstime.com/b/blank-sheet-paper-pen-bright-wooden-office-desk-blank-sheet-paper-pen-bright-wooden-office-desk-176684742.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 textarea { max-width: 100% }
+
+.alert {
+    background-color: #E3371E;
+}
+
+.add {
+    color: white;
+    background-color:#0593A2;
+}
+
+.todo_list {
+    background-color: #10367881;
+   
+}
