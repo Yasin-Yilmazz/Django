@@ -99,9 +99,11 @@ class StudentRUD(RetrieveUpdateDestroyAPIView):
 
 ### CBV ### ### ViewSet ###
 
+from .pagination import SmallPageNumberPagination
 class StudentGRUD(ModelViewSet):
     queryset=Student.objects.all()
     serializer_class=StudentSerializer
+    # pagination_class = SmallPageNumberPagination
 
     @action(detail=False,methods=['GET'])
     def student_count(self,request):
